@@ -144,30 +144,14 @@ $ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenu
 
 ## Code
 
-For the rest of the code, check the [SQL_queries.sql](https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql) file
+For the rest of the code, check the [SQL_queries.sql](https://github.com/NRJ-SAJWAN/WalmartSalesAnaysis_SQL/blob/main/walmartworking.sql) file
 
 ```sql
 -- Create database
 CREATE DATABASE IF NOT EXISTS walmartSales;
 
 -- Create table
-CREATE TABLE IF NOT EXISTS sales(
-	invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
-    branch VARCHAR(5) NOT NULL,
-    city VARCHAR(30) NOT NULL,
-    customer_type VARCHAR(30) NOT NULL,
-    gender VARCHAR(30) NOT NULL,
-    product_line VARCHAR(100) NOT NULL,
-    unit_price DECIMAL(10,2) NOT NULL,
-    quantity INT NOT NULL,
-    tax_pct FLOAT(6,4) NOT NULL,
-    total DECIMAL(12, 4) NOT NULL,
-    date DATETIME NOT NULL,
-    time TIME NOT NULL,
-    payment VARCHAR(15) NOT NULL,
-    cogs DECIMAL(10,2) NOT NULL,
-    gross_margin_pct FLOAT(11,9),
-    gross_income DECIMAL(12, 4),
-    rating FLOAT(2, 1)
-);
+Create Table sale(invoice_id varchar(30) NOT NULL PRIMARY KEY,branch VARCHAR(5) NOT NULL,city VARCHAR(30) NOT NULL,customer_type VARCHAR(30) NOT NULL,gender VARCHAR(30) NOT NULL,
+product_line VARCHAR(100) NOT NULL,unit_price decimal (10,2) not null,qunatity INT NOT NULL,VAT float(6,4) not null,total decimal (12,4) not null,date datetime not null,
+time TIME not null,payment_method varchar(15) not null,COGS decimal(10,2) not null,Gross_margin_percentage FLOAT(11,9),Gross_income decimal(12,4) not null,Rating float(2,1));
 ```
